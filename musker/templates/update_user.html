@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-md-6 offset-md-3">
+    <h1>Update User</h1>
+    <br/>
+
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <h3>User Information</h3>
+        <!-- Render the user form (e.g., email, password, first name, last name) -->
+        {{ user_form.as_p }}
+        
+        <br/>
+        
+        <h3>Profile Information</h3>
+        <!-- Render the profile form (e.g., profile image, bio, social media links) -->
+        {{ profile_form.as_p }}
+
+        <br/><br/>
+        <!-- Submit button to update the profile -->
+        <button type="submit" class="btn btn-secondary">Update Profile</button>
+    </form>
+
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
